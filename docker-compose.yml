@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  dummy-portal:
+    image: danyanya/dummy-portal:latest
+    build: .
+    environment:
+      SERVE_ADDR: 0.0.0.0:9999
+      REDIRECT_URL: https://ya.ru/
+    network_mode: host
+    privileged: true
