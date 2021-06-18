@@ -43,7 +43,7 @@ func main() {
 
 	var ur, _ = url.Parse(env.RedirectURL)
 
-	e.GET("/",
+	e.GET("*",
 		func(c echo.Context) error {
 			var ip = c.RealIP()
 			var u = ur
